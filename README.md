@@ -21,3 +21,6 @@ Upload/push the contents of this folder to the root of your GitHub repository an
 
 ## Important
 The case-study pages contain draft placeholders where project facts and metrics have not yet been verified. Replace them with real project details before publishing.
+
+## Current theme
+Clean high-contrast light theme using navy, cobalt blue, coral and soft lavender accents.
