@@ -1,9 +1,23 @@
-# Saksham Product Portfolio
+# Saksham Malik — Product Portfolio
 
-Responsive static portfolio combining the strongest ideas from the supplied references:
-- strong developer-style hero, projects, skills, experience and contact
-- problem-first Impact Canvas case-study storytelling
-- dark, premium, product-focused visual language
-- mobile responsive layout
+Final multi-page Vercel-ready static portfolio.
 
-Replace illustrative case-study copy with verified project metrics, screenshots and links before publishing.
+## Pages
+- `index.html` — Home
+- `work.html` — Selected work
+- `case-study-01.html` — Product case study
+- `case-study-02.html` — Integration case study
+- `case-study-03.html` — Data case study
+- `about.html` — Experience, education and toolkit
+- `contact.html` — Contact
+
+## Assets
+- `assets/saksham-professional-portrait.png` — professional profile portrait
+- `assets/styles.css` — design system and responsive styling
+- `assets/app.js` — scroll/reveal/navigation interactions
+
+## Deploy
+Upload/push the contents of this folder to the root of your GitHub repository and connect that repository to Vercel. No build command is required for this static site.
+
+## Important
+The case-study pages contain draft placeholders where project facts and metrics have not yet been verified. Replace them with real project details before publishing.
