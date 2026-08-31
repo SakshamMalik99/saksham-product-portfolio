@@ -1,26 +1,31 @@
-# Saksham Malik — Product Portfolio
+# Saksham Malik - Product Portfolio (Updated)
 
-Final multi-page Vercel-ready static portfolio.
+This update replaces the generic/draft case-study placeholders with the two supplied NextLeap case studies:
 
-## Pages
-- `index.html` — Home
-- `work.html` — Selected work
-- `case-study-01.html` — Product case study
-- `case-study-02.html` — Integration case study
-- `case-study-03.html` — Data case study
-- `about.html` — Experience, education and toolkit
-- `contact.html` — Contact
+1. **Intelligent Gifting - From gift discovery to gifting confidence**
+2. **Claude Navigator - Route the task, not the user**
+
+## Updated pages
+- `index.html` - updated homepage and featured work
+- `work.html` - updated selected-work page
+- `case-study-01.html` - Intelligent Gifting case study
+- `case-study-02.html` - Claude Navigator case study
+- `case-study-03.html` - neutral “more case studies coming soon” page so no old fake Data case study remains
+- `about.html` - retained from the original portfolio
+- `contact.html` - retained from the original portfolio
 
 ## Assets
-- `assets/saksham-professional-portrait.png` — professional profile portrait
-- `assets/styles.css` — design system and responsive styling
-- `assets/app.js` — scroll/reveal/navigation interactions
+The package contains selected rendered visuals from the supplied NextLeap PDFs under:
+`assets/case-studies/`
+
+Keep the original portfolio assets in `assets/`, especially:
+- `styles.css`
+- `app.js`
+- `saksham-professional-portrait.png`
+- `Saksham_Malik_Resume.pdf`
+
+## Important content note
+The two NextLeap documents contain product concepts, research findings, prototype flows and proposed success targets. Where a number is a target rather than an achieved production result, the portfolio explicitly labels it as a **proposed validation target**. No fabricated customer, revenue or production-impact claims were added.
 
 ## Deploy
-Upload/push the contents of this folder to the root of your GitHub repository and connect that repository to Vercel. No build command is required for this static site.
-
-## Important
-The case-study pages contain draft placeholders where project facts and metrics have not yet been verified. Replace them with real project details before publishing.
-
-## Current theme
-Clean high-contrast light theme using navy, cobalt blue, coral and soft lavender accents.
+Replace the corresponding HTML files in the existing Git repository and copy the `assets/case-studies/` folder. Keep your existing `assets/styles.css`, `assets/app.js`, portrait and resume assets.
