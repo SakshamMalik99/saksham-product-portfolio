@@ -1,31 +1,19 @@
-# Saksham Malik - Product Portfolio (Updated)
+# Saksham Malik, product portfolio
 
-This update replaces the generic/draft case-study placeholders with the two supplied NextLeap case studies:
+Static site, deployed on Vercel. No build step: every page is plain HTML sharing `assets/styles.css` and `assets/app.js`.
 
-1. **Intelligent Gifting - From gift discovery to gifting confidence**
-2. **Claude Navigator - Route the task, not the user**
-
-## Updated pages
-- `index.html` - updated homepage and featured work
-- `work.html` - updated selected-work page
-- `case-study-01.html` - Intelligent Gifting case study
-- `case-study-02.html` - Claude Navigator case study
-- `case-study-03.html` - neutral “more case studies coming soon” page so no old fake Data case study remains
-- `about.html` - retained from the original portfolio
-- `contact.html` - retained from the original portfolio
+## Pages
+- `index.html`: home
+- `work.html`: all case studies
+- `case-study-03.html`: FarEye, from customer SOPs to shipped features (shipped work, shown first)
+- `case-study-01.html`: FELT, intelligent gifting (NextLeap)
+- `case-study-02.html`: Claude Navigator (NextLeap)
+- `about.html`, `contact.html`
 
 ## Assets
-The package contains selected rendered visuals from the supplied NextLeap PDFs under:
-`assets/case-studies/`
+- `assets/case-studies/`: slides rendered from the decks in `reference/`
+- `reference/`: full case study decks, linked from each NextLeap case study
+- `assets/Saksham_Malik_Resume.pdf`: the resume download. Replace it whenever the resume changes.
 
-Keep the original portfolio assets in `assets/`, especially:
-- `styles.css`
-- `app.js`
-- `saksham-professional-portrait.png`
-- `Saksham_Malik_Resume.pdf`
-
-## Important content note
-The two NextLeap documents contain product concepts, research findings, prototype flows and proposed success targets. Where a number is a target rather than an achieved production result, the portfolio explicitly labels it as a **proposed validation target**. No fabricated customer, revenue or production-impact claims were added.
-
-## Deploy
-Replace the corresponding HTML files in the existing Git repository and copy the `assets/case-studies/` folder. Keep your existing `assets/styles.css`, `assets/app.js`, portrait and resume assets.
+## Content rule
+Numbers from live FarEye work are results. Numbers in the NextLeap case studies are research findings or proposed targets, and are labelled that way.
