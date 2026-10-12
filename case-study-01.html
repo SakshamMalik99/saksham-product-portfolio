@@ -1,145 +1,146 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Saksham Malik, FELT intelligent gifting product case study">
-  <title>FELT, intelligent gifting · Saksham Malik</title>
-  <link rel="stylesheet" href="assets/styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FELT, from gift discovery to gifting confidence · Saksham Malik</title>
+<meta name="description" content="FELT, a NextLeap product case study by Saksham Malik: research with 31 people, a scored feature backlog, an MVP flow and proposed success metrics.">
+<link rel="preload" href="assets/fonts/archivo-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-<div class="progress"></div>
-<nav><div class="wrap nav">
-  <a class="brand" href="index.html">Saksham<span>.</span></a>
-  <div class="navlinks" id="navlinks"><a href="index.html">Home</a><a href="work.html">Work</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
-  <a class="navcta" href="contact.html">Let's talk ↗</a><button class="mobile" type="button" aria-expanded="false" aria-controls="navlinks">Menu</button>
-</div></nav>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head"><div class="wrap">
+  <a class="brand" href="index.html">Saksham Malik</a>
+  <nav class="navlinks" id="navlinks" aria-label="Main"><a href="work.html">Work</a><a href="about.html">About</a><a href="contact.html">Contact</a><a class="resume-link" href="assets/Saksham_Malik_Resume.pdf">Resume</a></nav>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="navlinks">Menu</button>
+</div></header>
 
-<main>
-<header class="wrap pagehero casehero reveal">
-  <div>
-    <div class="eyebrow">FELT, intelligent gifting · NextLeap product case study</div>
-    <h1>From gift discovery to gifting confidence.</h1>
-    <p class="lead">A confidence-first gifting concept that starts with understanding the recipient, then uses AI to explain why a gift direction fits the person and the moment.</p>
-    <div class="meta"><span>Product strategy</span><span>User research</span><span>AI / LLM</span><span>Prioritization</span></div>
-    <div class="actions"><a class="btn" href="reference/intelligent-gifting-source.pdf" target="_blank" rel="noopener">Full case study deck (PDF) ↓</a></div>
-  </div>
-  <div class="visual"><div class="diagram">
-    <div class="node green">UNDERSTAND RECIPIENT</div><div class="arrow">↓</div>
-    <div class="node">CONTEXT + OCCASION</div><div class="arrow">↓</div>
-    <div class="node green">AI RATIONALE</div><div class="arrow">↓</div>
-    <div class="node">GIFT DIRECTION</div><div class="arrow">↓</div>
-    <div class="node green">CONFIDENCE TO ACT</div>
-  </div></div>
-</header>
+<main id="main">
+<header class="page-head"><div class="wrap">
+  <a class="crumb" href="work.html">All work</a>
+  <p class="kicker">NextLeap PM Fellowship case study</p>
+  <h1>FELT: from gift discovery to gifting confidence</h1>
+  <p class="lead">A gifting product that starts by understanding the recipient, then explains why a gift direction fits the person and the moment, so the giver can stop searching and act.</p>
+  <div class="actions"><a class="btn" href="reference/intelligent-gifting-source.pdf">Full case study deck (PDF)</a></div>
+  <dl class="glance">
+    <div><dt>My role</dt><dd>Solo, research to prototype</dd></div>
+    <div><dt>When</dt><dd>2026</dd></div>
+    <div><dt>Research</dt><dd>31 primary research respondents</dd></div>
+    <div><dt>Output</dt><dd>MVP scope, flow and success metrics</dd></div>
+  </dl>
+</div></header>
 
-<section><div class="wrap casebody">
-<aside class="toc"><div class="eyebrow">On this page</div>
-<a href="#problem">01 Problem</a><a href="#research">02 Research</a><a href="#segment">03 Segment</a><a href="#decision">04 Product decision</a><a href="#solution">05 Solution</a><a href="#metrics">06 Success metrics</a><a href="#risks">07 Risks & learnings</a>
-</aside>
-<article class="casecontent">
+<div class="wrap case-body">
+  <nav class="toc" aria-label="On this page"><p>On this page</p><a href="#problem">Problem</a><a href="#research">Research</a><a href="#segment">Who it's for</a><a href="#decision">What to build</a><a href="#solution">Solution</a><a href="#metrics">Success metrics</a><a href="#risks">Risks and learnings</a></nav>
+  <article class="case-content">
 
-<section id="problem" style="padding-top:0;border:0">
-  <div class="eyebrow">01 · Problem</div><h2>The problem wasn't finding a gift. It was feeling sure.</h2>
-  <p>Existing gifting tools primarily optimize for discovery: catalogues, wishlists, quizzes and AI-generated lists. The case study reframes the job as a confidence problem: the giver often knows the recipient, but struggles to translate that knowledge into one decision they feel good about.</p>
-  <div class="callout"><b>Core insight:</b> Move the experience from “What should I buy?” to “Why does this fit this person and this occasion?”</div>
-  <div class="stats">
-    <div class="stat"><strong>4 of 31</strong><span>felt fully confident in their last gift decision (13%)</span></div>
-    <div class="stat"><strong>15 of 31</strong><span>wanted an explanation of why the gift fits (48%)</span></div>
-    <div class="stat"><strong>13 of 31</strong><span>became more confused after online searching (42%)</span></div>
-    <div class="stat"><strong>n = 31</strong><span>primary research respondents</span></div>
-  </div>
-</section>
+    <section id="problem">
+      <h2>The problem wasn't finding a gift. It was feeling sure.</h2>
+      <div class="prose"><p>Gifting tools mostly optimise for discovery: catalogues, wishlists, quizzes and AI-generated lists. But the giver usually knows the recipient. What they struggle with is turning that knowledge into one decision they feel good about.</p></div>
+      <div class="figures three">
+        <div><strong>4 of 31</strong><span>felt fully confident about their last gift (13%)</span></div>
+        <div><strong>15 of 31</strong><span>wanted to know why a gift fits (48%)</span></div>
+        <div><strong>13 of 31</strong><span>felt more confused after searching online (42%)</span></div>
+      </div>
+      <div class="decision"><b>Reframe</b><p>Move the question from "What should I buy?" to "Why does this fit this person and this occasion?"</p></div>
+    </section>
 
-<section id="research">
-  <div class="eyebrow">02 · Research</div><h2>Research validated the anxiety hypothesis.</h2>
-  <p>The primary research covered real gifting behaviour rather than hypotheticals. The strongest signal was not a lack of ideas; it was low confidence and a desire for contextual reasoning.</p>
-  <div class="canvasgrid">
-    <div class="canvascard"><b>Behaviour</b><h4>Last-minute is common</h4><p>9 of 31 (29%) decide the same day or at the last minute; 17 of 31 (55%) had bought something last minute.</p></div>
-    <div class="canvascard"><b>Search</b><h4>Discovery creates noise</h4><p>19 of 31 (61%) search Google/Amazon first, while 13 of 31 (42%) reported becoming more confused afterwards.</p></div>
-    <div class="canvascard"><b>Confidence</b><h4>Certainty is the missing layer</h4><p>Only 4 of 31 (13%) felt fully confident about their last gift decision.</p></div>
-    <div class="canvascard"><b>Rationale</b><h4>The “why” matters</h4><p>15 of 31 (48%) said an explanation of exactly why a gift fits the person and occasion would make them confident.</p></div>
-  </div>
-  <div style="margin-top:28px"><img src="assets/case-studies/gifting-research.png" alt="Slide: FELT primary research findings from 31 respondents and secondary research" style="width:100%;height:auto;border-radius:14px;display:block"></div>
-</section>
+    <section id="research">
+      <h2>Research backed the anxiety hypothesis</h2>
+      <div class="prose"><p>The research asked about real past gifting, not hypotheticals. The strongest signal wasn't a lack of ideas. It was low confidence and a wish for reasons.</p></div>
+      <ul class="prose">
+        <li>9 of 31 decide on the same day or at the last minute, and 17 of 31 have bought something last minute.</li>
+        <li>19 of 31 start on Google or Amazon, and 13 of 31 came away more confused.</li>
+        <li>15 of 31 said an explanation of why a gift fits the person and occasion would make them confident.</li>
+      </ul>
+      <figure><img src="assets/case-studies/gifting-research.png" alt="Slide: FELT primary research findings from 31 respondents, and secondary research on choice overload" width="1600" height="902" loading="lazy"><figcaption>Primary and secondary research, from the case study deck.</figcaption></figure>
+    </section>
 
-<section id="segment">
-  <div class="eyebrow">03 · Target segment</div><h2>Focus on the relationship-conscious gifter.</h2>
-  <p>The target is behavioural, not demographic: people who care about what a gift communicates about the relationship and experience anxiety when they cannot translate what they know into a confident choice.</p>
-  <div class="canvasgrid">
-    <div class="canvascard"><b>Overthinker</b><h4>Knows the person, doubts the choice</h4><p>Can spend 2–3 hours searching and still seek reassurance before checkout.</p></div>
-    <div class="canvascard"><b>Last-minute defaulter</b><h4>Runs out of thinking time</h4><p>Realises the occasion is close, defaults to a familiar marketplace and buys something safe.</p></div>
-    <div class="canvascard"><b>Unmet need</b><h4>Contextual synthesis</h4><p>Turn existing knowledge about the recipient into a useful direction.</p></div>
-    <div class="canvascard"><b>Unmet need</b><h4>Rationale-based confidence</h4><p>Provide a reason, not just another recommendation.</p></div>
-  </div>
-</section>
+    <section id="segment">
+      <h2>Who it's for: the relationship-conscious gifter</h2>
+      <div class="prose"><p>The segment is defined by behaviour, not demographics: people who care what a gift says about the relationship, and feel anxious when they can't turn what they know into a confident choice.</p></div>
+      <div class="table-scroll"><table class="data">
+        <thead><tr><th scope="col">Pattern</th><th scope="col">What it looks like</th></tr></thead>
+        <tbody>
+          <tr><td><b>The overthinker</b></td><td>Knows the person but doubts the choice. Can spend 2 to 3 hours searching and still want reassurance before checkout.</td></tr>
+          <tr><td><b>The last-minute defaulter</b></td><td>Runs out of thinking time, goes to a familiar marketplace and buys something safe.</td></tr>
+        </tbody>
+      </table></div>
+      <div class="prose" style="margin-top:20px"><p>Both need the same two things: help turning what they know about the recipient into a direction, and a reason they can trust, not just another recommendation.</p></div>
+    </section>
 
-<section id="decision">
-  <div class="eyebrow">04 · Product decision</div><h2>Prioritize confidence before commerce.</h2>
-  <p>The core JTBD was: “When I am choosing a gift for someone I care about, I want to understand why a specific gift direction fits this person and this moment, so I can feel confident enough to stop searching and act.”</p>
-  <div class="canvasgrid">
-    <div class="canvascard"><b>01 · Recipient Profile Builder</b><h4>MVP · RICE 4.75</h4><p>Six conversational questions capture personality, current context, relationship, occasion, budget and past gifts.</p></div>
-    <div class="canvascard"><b>02 · AI Gift Rationale Engine</b><h4>MVP · RICE 4.75</h4><p>Returns four gift directions with a specific explanation tied to the user's inputs.</p></div>
-    <div class="canvascard"><b>03 · Occasion Context Layer</b><h4>MVP · RICE 4.25</h4><p>Adjusts emotional register, spend and tone so the recommendation fits the moment as well as the person.</p></div>
-    <div class="canvascard"><b>Explicit trade-off</b><h4>Commerce excluded from MVP</h4><p>Product links were deliberately out of scope. “Where to buy” comes after knowing what to buy and why.</p></div>
-  </div>
-</section>
+    <section id="decision">
+      <h2>What to build first: confidence before commerce</h2>
+      <div class="prose"><p>The job to be done: "When I'm choosing a gift for someone I care about, I want to understand why a specific gift direction fits this person and this moment, so I can feel confident enough to stop searching and act."</p>
+      <p>I scored eight candidate features on impact, feasibility, alignment with that job and strength of evidence, each out of 5, and averaged them.</p></div>
+      <div class="table-scroll"><table class="data">
+        <thead><tr><th scope="col">Feature</th><th scope="col">Impact</th><th scope="col">Feasibility</th><th scope="col">Alignment</th><th scope="col">Evidence</th><th scope="col">Score</th><th scope="col">Decision</th></tr></thead>
+        <tbody>
+          <tr class="chosen"><td>Recipient Profile Builder</td><td class="num">5</td><td class="num">4</td><td class="num">5</td><td class="num">5</td><td class="num">4.75</td><td>MVP</td></tr>
+          <tr class="chosen"><td>AI Gift Rationale Engine</td><td class="num">5</td><td class="num">4</td><td class="num">5</td><td class="num">5</td><td class="num">4.75</td><td>MVP</td></tr>
+          <tr class="chosen"><td>Occasion Context Layer</td><td class="num">4</td><td class="num">5</td><td class="num">4</td><td class="num">4</td><td class="num">4.25</td><td>MVP</td></tr>
+          <tr><td>Gift Memory Log</td><td class="num">4</td><td class="num">3</td><td class="num">3</td><td class="num">4</td><td class="num">3.50</td><td>v1.1</td></tr>
+          <tr><td>Recipient Feedback Loop</td><td class="num">5</td><td class="num">2</td><td class="num">3</td><td class="num">3</td><td class="num">3.25</td><td>v1.1</td></tr>
+          <tr><td>Social Gifting Circle</td><td class="num">4</td><td class="num">2</td><td class="num">3</td><td class="num">3</td><td class="num">3.00</td><td>v2</td></tr>
+          <tr><td>Budget Intelligence</td><td class="num">3</td><td class="num">4</td><td class="num">2</td><td class="num">2</td><td class="num">2.75</td><td>v2</td></tr>
+          <tr><td>Product Link Integration</td><td class="num">2</td><td class="num">5</td><td class="num">1</td><td class="num">1</td><td class="num">2.25</td><td>Out of scope</td></tr>
+        </tbody>
+      </table></div>
+      <div class="decision"><b>The trade-off</b><p>Product links scored joint highest on feasibility and lowest on alignment and evidence, so I left them out. "Where to buy" only matters once the giver knows what to buy and why.</p></div>
+    </section>
 
-<section id="solution">
-  <div class="eyebrow">05 · Solution</div><h2>A conversation that ends in a reasoned direction.</h2>
-  <p>The proposed flow replaces browsing with a short, structured conversation. The system gathers recipient context, applies occasion rules, sends the structured profile to an LLM and returns directions with rationale.</p>
-  <div class="visual"><div class="diagram">
-    <div class="node">1. Occasion + recipient</div><div class="arrow">↓</div>
-    <div class="node">2. Six conversational inputs</div><div class="arrow">↓</div>
-    <div class="node green">3. Occasion context engine</div><div class="arrow">↓</div>
-    <div class="node green">4. LLM rationale generation</div><div class="arrow">↓</div>
-    <div class="node">5. Four gift directions + why</div><div class="arrow">↓</div>
-    <div class="node green">6. Refine / save / share</div>
-  </div></div>
-  <div style="margin-top:28px"><img src="assets/case-studies/gifting-mvp.png" alt="Slide: FELT MVP features ranked by RICE score, with commerce excluded" style="width:100%;height:auto;border-radius:14px;display:block"></div>
-  <div class="canvasgrid" style="margin-top:28px">
-    <div class="canvascard"><b>Screen 1</b><h4>Who are you gifting?</h4><p>Occasion selector + recipient name. Designed to start in under 30 seconds.</p></div>
-    <div class="canvascard"><b>Screen 2</b><h4>Tell us about them</h4><p>One question at a time, designed to feel like thinking out loud.</p></div>
-    <div class="canvascard"><b>Screen 3</b><h4>Your 4 gift directions</h4><p>Each card explains why it fits the recipient, occasion and relationship.</p></div>
-    <div class="canvascard"><b>Screen 4</b><h4>Refine or save</h4><p>Regenerate, save, share and optionally rate confidence to improve future outputs.</p></div>
-  </div>
-</section>
+    <section id="solution">
+      <h2>A short conversation that ends in a reasoned direction</h2>
+      <div class="prose"><p>Browsing is replaced by a structured conversation. The product gathers context about the recipient, applies rules for the occasion, sends a structured profile to an LLM and returns gift directions with the reasoning attached.</p></div>
+      <ol class="flow">
+        <li><div><b>Who are you gifting?</b><span>Pick the occasion and name the recipient. Designed to start in under 30 seconds.</span></div></li>
+        <li><div><b>Tell us about them</b><span>Six questions, one at a time: personality, current context, relationship, occasion, budget and past gifts.</span></div></li>
+        <li><div><b>Your four gift directions</b><span>Each one explains why it fits the recipient, the occasion and the relationship.</span></div></li>
+        <li><div><b>Refine or save</b><span>Regenerate, save or share, and optionally rate confidence to improve future results.</span></div></li>
+      </ol>
+      <figure><img src="assets/case-studies/gifting-wireframes.png" alt="Slide: the four FELT screens as wireframes, with notes on the conversation flow and system architecture" width="1600" height="902" loading="lazy"><figcaption>Wireframes and system architecture, from the case study deck.</figcaption></figure>
+    </section>
 
-<section id="metrics">
-  <div class="eyebrow">06 · Success metrics</div><h2>Measure confidence formed, not sessions completed.</h2>
-  <p>Because this is a product concept/prototype case study, these are proposed validation targets rather than claimed production outcomes.</p>
-  <div class="stats">
-    <div class="stat"><strong>8+/10</strong><span>North-star confidence score target</span></div>
-    <div class="stat"><strong>&gt;80%</strong><span>profile completion target</span></div>
-    <div class="stat"><strong>&gt;60%</strong><span>7-day action-rate target</span></div>
-    <div class="stat"><strong>&lt;15%</strong><span>generic-output guardrail</span></div>
-  </div>
-  <div class="canvasgrid" style="margin-top:28px">
-    <div class="canvascard"><b>North Star</b><h4>Confidence Score</h4><p>Post-session rating asking how confident the user feels about the gift.</p></div>
-    <div class="canvascard"><b>Leading</b><h4>Profile Completion</h4><p>Target &gt;80%; drop-off indicates the conversation is too long or difficult.</p></div>
-    <div class="canvascard"><b>Lagging</b><h4>Action + return</h4><p>Target &gt;60% acting within seven days and &gt;40% returning within 30 days.</p></div>
-    <div class="canvascard"><b>Guardrail</b><h4>Generic Output Rate</h4><p>Keep outputs that feel “written for anyone” below 15%.</p></div>
-  </div>
-  <div style="margin-top:28px"><img src="assets/case-studies/gifting-metrics.png" alt="Slide: FELT metrics hierarchy, monetisation plan and A/B experiment" style="width:100%;height:auto;border-radius:14px;display:block"></div>
-</section>
+    <section id="metrics">
+      <h2>Measure confidence formed, not sessions completed</h2>
+      <div class="prose"><p>This is a concept and prototype, so these are proposed targets to validate, not results.</p></div>
+      <div class="table-scroll"><table class="data">
+        <thead><tr><th scope="col">Metric</th><th scope="col">Type</th><th scope="col">How it's measured</th><th scope="col">Target</th></tr></thead>
+        <tbody>
+          <tr><td><b>Confidence score</b></td><td>North Star</td><td>Post-session rating: how confident do you feel about this gift?</td><td class="num">8+ / 10</td></tr>
+          <tr><td><b>Profile completion</b></td><td>Leading</td><td>Share of users who finish the six questions. A drop means the conversation is too long or too hard.</td><td class="num">&gt; 80%</td></tr>
+          <tr><td><b>Action within 7 days</b></td><td>Lagging</td><td>Users who act on a direction within a week.</td><td class="num">&gt; 60%</td></tr>
+          <tr><td><b>Return within 30 days</b></td><td>Lagging</td><td>Users who come back for another occasion.</td><td class="num">&gt; 40%</td></tr>
+          <tr><td><b>Generic output rate</b></td><td>Guardrail</td><td>Directions users say could have been written for anyone.</td><td class="num">&lt; 15%</td></tr>
+        </tbody>
+      </table></div>
+      <figure><img src="assets/case-studies/gifting-metrics.png" alt="Slide: FELT metrics hierarchy, monetisation plan and A/B experiment design" width="1600" height="902" loading="lazy"><figcaption>Metrics hierarchy and monetisation plan, from the case study deck.</figcaption></figure>
+    </section>
 
-<section id="risks">
-  <div class="eyebrow">07 · Risks & learnings</div><h2>Trust is the product constraint.</h2>
-  <div class="canvasgrid">
-    <div class="canvascard"><b>Risk</b><h4>AI rationale feels generic</h4><p>Mitigation: every rationale must reference something specific the user told the product.</p></div>
-    <div class="canvascard"><b>Risk</b><h4>Low gifting frequency</h4><p>Mitigation: occasion reminders and a future B2B use case increase frequency.</p></div>
-    <div class="canvascard"><b>Risk</b><h4>Edge-case quality</h4><p>Mitigation: staged rollout across common occasions before expanding.</p></div>
-    <div class="canvascard"><b>Learning</b><h4>Confidence beats catalogue size</h4><p>The strongest product opportunity is not another list of products; it is helping the user understand why a direction is right.</p></div>
-  </div>
-  <div class="callout" style="margin-top:28px"><b>Product principle:</b> Commerce follows confidence. The product earns the right to show “where to buy” only after it has helped the user decide “what to buy and why.”</div>
-</section>
+    <section id="risks">
+      <h2>Trust is the product constraint</h2>
+      <div class="table-scroll"><table class="data">
+        <thead><tr><th scope="col">Risk</th><th scope="col">Mitigation</th></tr></thead>
+        <tbody>
+          <tr><td><b>The reasoning feels generic</b></td><td>Every rationale has to reference something specific the user said.</td></tr>
+          <tr><td><b>People don't gift often</b></td><td>Occasion reminders, and a B2B use case later to raise frequency.</td></tr>
+          <tr><td><b>Weak results on unusual occasions</b></td><td>Roll out across common occasions first, then expand.</td></tr>
+        </tbody>
+      </table></div>
+      <div class="decision"><b>Principle</b><p>Commerce follows confidence. The product earns the right to show where to buy only after it has helped the user decide what to buy and why.</p></div>
+    </section>
 
-</article></div></section>
-<section><div class="wrap"><div class="next">
-  <a href="case-study-03.html"><small>← Previous case study</small><b>FarEye: SOPs to shipped features</b></a>
-  <a href="case-study-02.html"><small>Next case study →</small><b>Claude Navigator</b></a>
-</div></div></section>
+  </article>
+</div>
+
+<nav class="wrap pager" aria-label="Case studies">
+  <a href="case-study-03.html"><small>Previous case study</small><b>FarEye: customer SOPs to shipped features</b></a>
+  <a class="next" href="case-study-02.html"><small>Next case study</small><b>Claude Navigator</b></a>
+</nav>
 </main>
-<footer><div class="wrap">© 2026 Saksham Malik · Product / Solutions / Systems · <a href="mailto:maliksaksham0509@gmail.com">Email</a> · <a href="https://www.linkedin.com/in/sakshammalik99/" target="_blank" rel="noopener">LinkedIn</a></div></footer>
+
+<footer class="site-foot"><div class="wrap"><span>© 2026 Saksham Malik</span><nav aria-label="Footer"><a href="mailto:maliksaksham0509@gmail.com">Email</a><a href="https://www.linkedin.com/in/sakshammalik99/" rel="noopener">LinkedIn</a><a href="assets/Saksham_Malik_Resume.pdf">Resume</a></nav></div></footer>
 <script src="assets/app.js"></script>
-</body></html>
+</body>
+</html>

@@ -1,157 +1,161 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Saksham Malik, Claude Navigator product case study">
-  <title>Claude Navigator · Saksham Malik</title>
-  <link rel="stylesheet" href="assets/styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Claude Navigator, route the task not the user · Saksham Malik</title>
+<meta name="description" content="Claude Navigator, a NextLeap product case study by Saksham Malik: research with 25 Claude users, a RICE decision, a working prototype and proposed success metrics.">
+<link rel="preload" href="assets/fonts/archivo-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-<div class="progress"></div>
-<nav><div class="wrap nav">
-  <a class="brand" href="index.html">Saksham<span>.</span></a>
-  <div class="navlinks" id="navlinks"><a href="index.html">Home</a><a href="work.html">Work</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
-  <a class="navcta" href="contact.html">Let's talk ↗</a><button class="mobile" type="button" aria-expanded="false" aria-controls="navlinks">Menu</button>
-</div></nav>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head"><div class="wrap">
+  <a class="brand" href="index.html">Saksham Malik</a>
+  <nav class="navlinks" id="navlinks" aria-label="Main"><a href="work.html">Work</a><a href="about.html">About</a><a href="contact.html">Contact</a><a class="resume-link" href="assets/Saksham_Malik_Resume.pdf">Resume</a></nav>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="navlinks">Menu</button>
+</div></header>
 
-<main>
-<header class="wrap pagehero casehero reveal">
-  <div>
-    <div class="eyebrow">NextLeap product case study</div>
-    <h1>Claude Navigator: route the task, not the user.</h1>
-    <p class="lead">A routing-intelligence concept that helps Claude users choose between Agents, Projects and Prompts by explaining which capability fits their actual task.</p>
-    <div class="meta"><span>Product strategy</span><span>AI routing</span><span>User research</span><span>Prototype</span></div>
-    <div class="actions"><a class="btn primary" href="https://knack-route.lovable.app" target="_blank" rel="noopener">Try the prototype ↗</a><a class="btn" href="reference/claude-navigator-source.pdf" target="_blank" rel="noopener">Full case study deck (PDF) ↓</a></div>
-  </div>
-  <div class="visual"><div class="diagram">
-    <div class="node green">DESCRIBE TASK</div><div class="arrow">↓</div>
-    <div class="node">ANALYZE INTENT</div><div class="arrow">↓</div>
-    <div class="node green">FIT + TRADE-OFFS</div><div class="arrow">↓</div>
-    <div class="node">CAPABILITY PICK</div><div class="arrow">↓</div>
-    <div class="node green">CONFIGURE + EXECUTE</div>
-  </div></div>
-</header>
+<main id="main">
+<header class="page-head"><div class="wrap">
+  <a class="crumb" href="work.html">All work</a>
+  <p class="kicker">NextLeap PM Fellowship case study</p>
+  <h1>Claude Navigator: route the task, not the user</h1>
+  <p class="lead">Claude users know what they want done, but not whether an Agent, a Project or a prompt will do it. Navigator reads the task, recommends a capability and explains why, before any setup.</p>
+  <div class="actions"><a class="btn primary" href="https://knack-route.lovable.app" rel="noopener">Try the prototype</a><a class="btn" href="reference/claude-navigator-source.pdf">Full case study deck (PDF)</a></div>
+  <dl class="glance">
+    <div><dt>My role</dt><dd>Solo, research to prototype</dd></div>
+    <div><dt>When</dt><dd>2026</dd></div>
+    <div><dt>Research</dt><dd>25 Claude Pro and Team users</dd></div>
+    <div><dt>Output</dt><dd>Working prototype</dd></div>
+  </dl>
+</div></header>
 
-<section><div class="wrap casebody">
-<aside class="toc"><div class="eyebrow">On this page</div>
-<a href="#problem">01 Problem</a><a href="#research">02 Research</a><a href="#segment">03 Segment</a><a href="#decision">04 Product decision</a><a href="#prototype">05 Prototype</a><a href="#journey">06 Journey & architecture</a><a href="#metrics">07 Success metrics</a><a href="#gtm">08 GTM & risks</a>
-</aside>
-<article class="casecontent">
+<div class="wrap case-body">
+  <nav class="toc" aria-label="On this page"><p>On this page</p><a href="#problem">Problem</a><a href="#research">Research</a><a href="#segment">Who it's for</a><a href="#decision">What to build</a><a href="#prototype">Prototype</a><a href="#architecture">How it works</a><a href="#metrics">Success metrics</a><a href="#gtm">Launch and risks</a></nav>
+  <article class="case-content">
 
-<section id="problem" style="padding-top:0;border:0">
-  <div class="eyebrow">01 · Problem</div><h2>The capability suite was not the problem. Choosing was.</h2>
-  <p>Claude offers multiple capability paths — Agents, Skills, Projects and Prompts. The case study identifies a routing problem: users know what they want to accomplish but do not know which mode will fit the task without wasting time, tokens or effort.</p>
-  <div class="callout"><b>Core insight:</b> Today's tools treat capability selection as a search problem. Navigator treats it as a decision-confidence problem.</div>
-  <div class="stats">
-    <div class="stat"><strong>22 of 25</strong><span>failed first try or gave up (88%)</span></div>
-    <div class="stat"><strong>10 of 25</strong><span>said task-fit confusion was the hardest decision (40%)</span></div>
-    <div class="stat"><strong>17 of 25</strong><span>retreated to basic prompts after failure (68%)</span></div>
-    <div class="stat"><strong>3 of 25</strong><span>felt fully confident in their choice (12%)</span></div>
-  </div>
-</section>
+    <section id="problem">
+      <h2>The capabilities weren't the problem. Choosing was.</h2>
+      <div class="prose"><p>Claude offers several ways to get work done: Agents, Skills, Projects and prompts. Users know the outcome they want, but not which mode fits the task without wasting time, tokens or effort.</p></div>
+      <div class="figures">
+        <div><strong>22 of 25</strong><span>failed their first try or gave up</span></div>
+        <div><strong>17 of 25</strong><span>went back to basic prompts after failing</span></div>
+        <div><strong>10 of 25</strong><span>called task fit the hardest decision</span></div>
+        <div><strong>3 of 25</strong><span>felt fully confident in their choice</span></div>
+      </div>
+      <div class="decision"><b>Reframe</b><p>Today's tools treat choosing a capability as a search problem. Navigator treats it as a decision-confidence problem.</p></div>
+    </section>
 
-<section id="research">
-  <div class="eyebrow">02 · Research</div><h2>Research showed the friction happens at the decision moment.</h2>
-  <p>The primary research surveyed 25 Claude Pro/Team users using behavioural questions about real past tasks. The evidence pointed to decision friction rather than capability awareness.</p>
-  <div class="canvasgrid">
-    <div class="canvascard"><b>Selection bottleneck</b><h4>10 of 25 (40%)</h4><p>Did not know whether Agent fit the task.</p></div>
-    <div class="canvascard"><b>Trade-off gap</b><h4>7 of 25 (28%)</h4><p>Could not judge cost, quality and speed trade-offs.</p></div>
-    <div class="canvascard"><b>Setup wall</b><h4>4 of 25 (16%)</h4><p>Hit configuration difficulty after choosing Agent.</p></div>
-    <div class="canvascard"><b>Cost anxiety</b><h4>3 of 25 (12%)</h4><p>Feared wasting tokens on the wrong approach.</p></div>
-  </div>
-  <div class="callout" style="margin-top:28px"><b>Research conclusion:</b> more than 88% of the observed difficulty was in decision-making, not capability access.</div>
-</section>
+    <section id="research">
+      <h2>The friction happens at the moment of decision</h2>
+      <div class="prose"><p>I surveyed 25 Claude Pro and Team users with behavioural questions about real tasks they had tried. The evidence pointed to decision friction, not a lack of awareness.</p></div>
+      <div class="table-scroll"><table class="data">
+        <thead><tr><th scope="col">Where it broke</th><th scope="col">Users</th><th scope="col">What happened</th></tr></thead>
+        <tbody>
+          <tr><td><b>Selection</b></td><td class="num">10 of 25</td><td>Didn't know whether an Agent fit the task.</td></tr>
+          <tr><td><b>Trade-offs</b></td><td class="num">7 of 25</td><td>Couldn't judge the cost, quality and speed trade-offs.</td></tr>
+          <tr><td><b>Setup</b></td><td class="num">4 of 25</td><td>Hit a configuration wall after choosing an Agent.</td></tr>
+          <tr><td><b>Cost anxiety</b></td><td class="num">3 of 25</td><td>Worried about wasting tokens on the wrong approach.</td></tr>
+        </tbody>
+      </table></div>
+      <figure><img src="assets/case-studies/navigator-cover.png" alt="Slide: market and problem landscape for Claude capability selection, with a table of current tools and why they fail" width="1600" height="900" loading="lazy"><figcaption>Market and problem landscape, from the case study deck.</figcaption></figure>
+    </section>
 
-<section id="segment">
-  <div class="eyebrow">03 · Target segment</div><h2>Design for the “Aware & Frustrated” Capable Explorer.</h2>
-  <p>The target segment already understands AI and actively wants to use advanced capabilities, but repeatedly fails at the capability-selection or setup step.</p>
-  <div class="canvasgrid">
-    <div class="canvascard"><b>Persona</b><h4>Arjun, 29 · Senior Engineer</h4><p>Uses Claude daily for code review, debugging and research.</p></div>
-    <div class="canvascard"><b>Pattern</b><h4>Clear task → configuration wall</h4><p>Tries Agent, spirals into trial-and-error and manually re-prompts.</p></div>
-    <div class="canvascard"><b>Emotion</b><h4>Self-doubt, not capability doubt</h4><p>“I know Claude can do this — why can't I figure this out?”</p></div>
-    <div class="canvascard"><b>Need</b><h4>Signal + scaffold</h4><p>Wants a clear fit signal and pre-filled path, not more documentation.</p></div>
-  </div>
-  <div style="margin-top:28px"><img src="assets/case-studies/navigator-cover.png" alt="Claude Navigator market and problem landscape" style="width:100%;height:auto;border-radius:14px;display:block"></div>
-</section>
+    <section id="segment">
+      <h2>Who it's for: the frustrated capable explorer</h2>
+      <div class="prose">
+        <p>These users already understand AI and want to use the advanced capabilities, but keep failing at the choosing or setup step. The persona built from the research: Arjun, 29, a senior engineer who uses Claude every day for code review, debugging and research.</p>
+        <p>His pattern is a clear task, then a configuration wall, then trial and error and manual re-prompting. The feeling is self-doubt, not doubt in Claude. He wants a clear signal that a capability fits, and a pre-filled path, not more documentation.</p>
+      </div>
+    </section>
 
-<section id="decision">
-  <div class="eyebrow">04 · Product decision</div><h2>Choose routing intelligence over more documentation.</h2>
-  <p>Three solution directions were evaluated against the task-fit gap, independence from external dependencies, decision timing, confidence-building and scalability.</p>
-  <div class="canvasgrid">
-    <div class="canvascard"><b>Solution 1</b><h4>Better docs & tooltips · RICE 28</h4><p>Improves comprehension, but users already know what capabilities do. It does not answer “does this fit my task?”</p></div>
-    <div class="canvascard"><b>Solution 2</b><h4>Community recommendation · RICE 35</h4><p>Maps to existing behaviour but introduces noise, latency and dependence on other people.</p></div>
-    <div class="canvascard"><b>Solution 3 · MVP</b><h4>Navigator · RICE 160</h4><p>Starts with the user's actual task, scores capabilities and explains the trade-offs before configuration.</p></div>
-    <div class="canvascard"><b>JTBD</b><h4>Confident first-try capability choice</h4><p>Translate a complex task into a capability choice the user believes will succeed.</p></div>
-  </div>
-  <div style="margin-top:28px"><img src="assets/case-studies/navigator-prioritization.png" alt="Claude Navigator ideation and prioritization matrix" style="width:100%;height:auto;border-radius:14px;display:block"></div>
-</section>
+    <section id="decision">
+      <h2>What to build: routing, not more documentation</h2>
+      <div class="prose"><p>I compared three directions on whether they close the task-fit gap, avoid outside dependencies, help at the moment of decision, build confidence and scale, then scored each with RICE.</p></div>
+      <div class="table-scroll"><table class="data">
+        <thead><tr><th scope="col">Option</th><th scope="col">RICE</th><th scope="col">Why</th></tr></thead>
+        <tbody>
+          <tr><td><b>Better docs and tooltips</b></td><td class="num">28</td><td>Users already know what each capability does. Docs don't answer "does this fit my task?"</td></tr>
+          <tr><td><b>Community recommendations</b></td><td class="num">35</td><td>Matches how people ask today, but adds noise, delay and dependence on others.</td></tr>
+          <tr class="chosen"><td><b>Navigator MVP</b></td><td class="num">160</td><td>Starts from the user's actual task, scores each capability and explains the trade-offs before any setup.</td></tr>
+        </tbody>
+      </table></div>
+      <div class="decision"><b>Job to be done</b><p>Turn a complex task into a capability choice the user believes will work on the first try.</p></div>
+      <figure><img src="assets/case-studies/navigator-prioritization.png" alt="Slide: three solution options, a comparative decision matrix and RICE scores of 28, 35 and 160" width="1600" height="900" loading="lazy"><figcaption>Ideation and prioritisation, from the case study deck.</figcaption></figure>
+    </section>
 
-<section id="prototype">
-  <div class="eyebrow">05 · Prototype</div><h2>Remove the mode selector from the start.</h2>
-  <p>The prototype deliberately starts with the user's task in plain language. Navigator detects complexity, extracts intent dimensions and then presents ranked capabilities with auditable reasoning.</p>
-  <div class="canvasgrid">
-    <div class="canvascard"><b>01 · Get started</b><h4>Describe your task</h4><p>No mode selector. The user starts where they are: the task they need to complete.</p></div>
-    <div class="canvascard"><b>02 · Intent analysis</b><h4>Five intent dimensions</h4><p>Task type, complexity, tool needs, repetition flag and branching logic.</p></div>
-    <div class="canvascard"><b>03 · Recommendation</b><h4>Fit score + reasoning</h4><p>Three ranked capability cards quote the user's own words to explain the fit.</p></div>
-    <div class="canvascard"><b>04 · Configuration</b><h4>Scaffold the next action</h4><p>Paid-tier concept adds pre-filled Agent / Project / Skill configuration, token estimates and saved templates.</p></div>
-  </div>
-  <div style="margin-top:28px"><img src="assets/case-studies/navigator-prototype.png" alt="Claude Navigator wireframing and prototype screens" style="width:100%;height:auto;border-radius:14px;display:block"></div>
-</section>
+    <section id="prototype">
+      <h2>Remove the mode selector from the start</h2>
+      <div class="prose"><p>The prototype starts with the user's task in plain language. Navigator detects complexity, pulls out intent signals, and only then shows ranked capabilities with reasoning the user can check. <a href="https://knack-route.lovable.app" rel="noopener">Try it yourself.</a></p></div>
+      <ol class="flow">
+        <li><div><b>Describe your task</b><span>No mode selector. The user starts with the job they need done.</span></div></li>
+        <li><div><b>Intent analysis</b><span>Five signals: task type, complexity, tool needs, whether it repeats, and whether it branches.</span></div></li>
+        <li><div><b>Recommendation</b><span>Three ranked capability cards with a fit score, quoting the user's own words to explain the fit.</span></div></li>
+        <li><div><b>Configuration</b><span>A paid-tier idea: pre-filled Agent, Project or Skill setup, token estimates and saved templates.</span></div></li>
+      </ol>
+      <figure><img src="assets/case-studies/navigator-prototype.png" alt="Slide: four prototype screens, from the home screen to intent analysis, with notes on each" width="1600" height="900" loading="lazy"><figcaption>Wireframes and prototype screens, from the case study deck.</figcaption></figure>
+    </section>
 
-<section id="journey">
-  <div class="eyebrow">06 · Journey & architecture</div><h2>Make the reasoning visible from task to outcome.</h2>
-  <div class="visual"><div class="diagram">
-    <div class="node">L1 · Data ingestion — task, context, token budget</div><div class="arrow">↓</div>
-    <div class="node">L2 · Signal processing — intent vector + complexity classifier</div><div class="arrow">↓</div>
-    <div class="node green">L3 · AI engine — LLM API + capability scorer</div><div class="arrow">↓</div>
-    <div class="node">L4 · Output — fit score + reasoning + trade-offs</div><div class="arrow">↓</div>
-    <div class="node green">L5 · Storage & learning — feedback + route history</div>
-  </div></div>
-  <div class="canvasgrid" style="margin-top:28px">
-    <div class="canvascard"><b>1 · Confusion</b><h4>Reverts to prompting</h4><p>User knows the desired outcome but hesitates over the correct mode.</p></div>
-    <div class="canvascard"><b>2 · Routing</b><h4>Navigator reads intent</h4><p>Extracts structured signals rather than matching only keywords.</p></div>
-    <div class="canvascard"><b>3 · Decision</b><h4>Recommendation with reasoning</h4><p>Prototype journey illustrates a 92% fit recommendation and explicit rationale.</p></div>
-    <div class="canvascard"><b>4 · Confidence</b><h4>Execute and learn</h4><p>User accepts, executes, saves the route and feeds the outcome loop.</p></div>
-  </div>
-</section>
+    <section id="architecture">
+      <h2>How it works: reasoning visible from task to outcome</h2>
+      <div class="table-scroll"><table class="data">
+        <thead><tr><th scope="col">Layer</th><th scope="col">What it does</th></tr></thead>
+        <tbody>
+          <tr><td><b>Data ingestion</b></td><td>Takes in the task, its context and the token budget.</td></tr>
+          <tr><td><b>Signal processing</b></td><td>Builds an intent vector and classifies complexity.</td></tr>
+          <tr><td><b>AI engine</b></td><td>Calls an LLM and scores each capability against the task.</td></tr>
+          <tr><td><b>Output</b></td><td>Returns a fit score, the reasoning and the trade-offs.</td></tr>
+          <tr><td><b>Storage and learning</b></td><td>Keeps feedback and route history to improve later recommendations.</td></tr>
+        </tbody>
+      </table></div>
+    </section>
 
-<section id="metrics">
-  <div class="eyebrow">07 · Success metrics</div><h2>Measure confidence uplift, not activity alone.</h2>
-  <p>These are proposed validation targets from the case study, not claimed production outcomes.</p>
-  <div class="stats">
-    <div class="stat"><strong>&gt;60%</strong><span>users reporting confidence ≥4/5 after recommendation</span></div>
-    <div class="stat"><strong>&gt;65%</strong><span>top-routing acceptance target</span></div>
-    <div class="stat"><strong>&gt;30%</strong><span>3-month return-rate target</span></div>
-    <div class="stat"><strong>-40%</strong><span>token-efficiency gain target vs baseline</span></div>
-  </div>
-  <div class="canvasgrid" style="margin-top:28px">
-    <div class="canvascard"><b>North Star</b><h4>Task-Fit Confidence Uplift</h4><p>At least 60% of users report confidence ≥4/5 after recommendation.</p></div>
-    <div class="canvascard"><b>Activation</b><h4>Session completion</h4><p>More than 60% reach a capability pick.</p></div>
-    <div class="canvascard"><b>Efficiency</b><h4>Token efficiency</h4><p>Target 40% lower token usage versus a no-Navigator baseline.</p></div>
-    <div class="canvascard"><b>Guardrail</b><h4>Generic routing</h4><p>Keep recommendations reported as arbitrary below 15%.</p></div>
-  </div>
-  <div style="margin-top:28px"><img src="assets/case-studies/navigator-metrics.png" alt="Claude Navigator business case and monetization plan" style="width:100%;height:auto;border-radius:14px;display:block"></div>
-</section>
+    <section id="metrics">
+      <h2>Measure confidence uplift, not activity</h2>
+      <div class="prose"><p>Proposed targets to validate, not results.</p></div>
+      <div class="table-scroll"><table class="data">
+        <thead><tr><th scope="col">Metric</th><th scope="col">Type</th><th scope="col">Target</th></tr></thead>
+        <tbody>
+          <tr><td><b>Task-fit confidence uplift</b></td><td>North Star</td><td>Over 60% of users rate confidence 4 or 5 out of 5 after a recommendation</td></tr>
+          <tr><td><b>Session completion</b></td><td>Leading</td><td>Over 60% reach a capability pick</td></tr>
+          <tr><td><b>Top-route acceptance</b></td><td>Leading</td><td>Over 65% accept the first recommendation</td></tr>
+          <tr><td><b>Return rate</b></td><td>Lagging</td><td>Over 30% return within 3 months</td></tr>
+          <tr><td><b>Token efficiency</b></td><td>Lagging</td><td>40% fewer tokens than without Navigator</td></tr>
+          <tr><td><b>Arbitrary recommendations</b></td><td>Guardrail</td><td>Under 15% of recommendations reported as arbitrary</td></tr>
+        </tbody>
+      </table></div>
+      <figure><img src="assets/case-studies/navigator-metrics.png" alt="Slide: Navigator metrics hierarchy and free and paid tier monetisation plan" width="1600" height="900" loading="lazy"><figcaption>Business case and monetisation plan, from the case study deck.</figcaption></figure>
+    </section>
 
-<section id="gtm">
-  <div class="eyebrow">08 · GTM & risks</div><h2>Distribution should happen at the moment of uncertainty.</h2>
-  <div class="canvasgrid">
-    <div class="canvascard"><b>Primary channel</b><h4>In-product contextual trigger</h4><p>When complexity crosses the threshold, surface Navigator inline before the user sends the task.</p></div>
-    <div class="canvascard"><b>Launch signal</b><h4>Power-user communities</h4><p>Seed access to Claude Discord and r/ClaudeAI contributors for high-signal feedback.</p></div>
-    <div class="canvascard"><b>Activation</b><h4>Dormant Pro users</h4><p>Use specific, data-backed prompts to show where Agents could save time.</p></div>
-    <div class="canvascard"><b>Risk</b><h4>Over-routing to Agents</h4><p>Recommend Agent only when enough intent signals fire and show cost before execution.</p></div>
-    <div class="canvascard"><b>Risk</b><h4>AI advising AI</h4><p>Make reasoning auditable: show the task evidence and capability trade-offs.</p></div>
-    <div class="canvascard"><b>Risk</b><h4>Cold-start ambiguity</h4><p>Ask a clarifying question rather than guessing; default to the safest capability tier.</p></div>
-  </div>
-  <div class="callout" style="margin-top:28px"><b>Product principle:</b> Reasoning beats choice. If Navigator cannot explain why a capability fits the user's own task, it has not solved the problem.</div>
-</section>
+    <section id="gtm">
+      <h2>Launch at the moment of uncertainty</h2>
+      <ul class="prose">
+        <li><b>In-product trigger:</b> when a task crosses a complexity threshold, show Navigator inline before the user sends it.</li>
+        <li><b>Early feedback:</b> seed access with power users in the Claude Discord and r/ClaudeAI.</li>
+        <li><b>Re-activation:</b> specific, data-backed prompts to dormant Pro users, showing where Agents could save them time.</li>
+      </ul>
+      <div class="table-scroll"><table class="data">
+        <thead><tr><th scope="col">Risk</th><th scope="col">Mitigation</th></tr></thead>
+        <tbody>
+          <tr><td><b>Over-routing to Agents</b></td><td>Recommend an Agent only when enough intent signals fire, and show the cost first.</td></tr>
+          <tr><td><b>AI advising on AI</b></td><td>Make the reasoning auditable: show the evidence from the task and the trade-offs.</td></tr>
+          <tr><td><b>Ambiguous first tasks</b></td><td>Ask one clarifying question instead of guessing, and default to the safest option.</td></tr>
+        </tbody>
+      </table></div>
+      <div class="decision"><b>Principle</b><p>Reasoning beats choice. If Navigator can't explain why a capability fits the user's own task, it hasn't solved the problem.</p></div>
+    </section>
 
-</article></div></section>
-<section><div class="wrap"><div class="next">
-  <a href="case-study-01.html"><small>← Previous case study</small><b>FELT, intelligent gifting</b></a>
-  <a href="work.html"><small>Back to work →</small><b>All case studies</b></a>
-</div></div></section>
+  </article>
+</div>
+
+<nav class="wrap pager" aria-label="Case studies">
+  <a href="case-study-01.html"><small>Previous case study</small><b>FELT, intelligent gifting</b></a>
+  <a class="next" href="work.html"><small>Back to</small><b>All work</b></a>
+</nav>
 </main>
-<footer><div class="wrap">© 2026 Saksham Malik · Product / Solutions / Systems · <a href="mailto:maliksaksham0509@gmail.com">Email</a> · <a href="https://www.linkedin.com/in/sakshammalik99/" target="_blank" rel="noopener">LinkedIn</a></div></footer>
+
+<footer class="site-foot"><div class="wrap"><span>© 2026 Saksham Malik</span><nav aria-label="Footer"><a href="mailto:maliksaksham0509@gmail.com">Email</a><a href="https://www.linkedin.com/in/sakshammalik99/" rel="noopener">LinkedIn</a><a href="assets/Saksham_Malik_Resume.pdf">Resume</a></nav></div></footer>
 <script src="assets/app.js"></script>
-</body></html>
+</body>
+</html>

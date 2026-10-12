@@ -1,129 +1,126 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Saksham Malik, shipped feature work at FarEye Technologies: customer SOPs to shipped features">
-  <title>FarEye · From customer SOPs to shipped features · Saksham Malik</title>
-  <link rel="stylesheet" href="assets/styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>From customer SOPs to shipped features, FarEye case study · Saksham Malik</title>
+<meta name="description" content="How Saksham Malik turned enterprise logistics workflows into shipped features at FarEye: discovery, specs, a sorting-machine integration and measured results.">
+<link rel="preload" href="assets/fonts/archivo-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-<div class="progress"></div>
-<nav><div class="wrap nav">
-  <a class="brand" href="index.html">Saksham<span>.</span></a>
-  <div class="navlinks" id="navlinks"><a href="index.html">Home</a><a href="work.html">Work</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
-  <a class="navcta" href="contact.html">Let's talk ↗</a><button class="mobile" type="button" aria-expanded="false" aria-controls="navlinks">Menu</button>
-</div></nav>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head"><div class="wrap">
+  <a class="brand" href="index.html">Saksham Malik</a>
+  <nav class="navlinks" id="navlinks" aria-label="Main"><a href="work.html">Work</a><a href="about.html">About</a><a href="contact.html">Contact</a><a class="resume-link" href="assets/Saksham_Malik_Resume.pdf">Resume</a></nav>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="navlinks">Menu</button>
+</div></header>
 
-<main>
-<header class="wrap pagehero casehero reveal">
-  <div>
-    <div class="eyebrow">Shipped work · FarEye Technologies</div>
-    <h1>From customer SOPs to shipped features.</h1>
-    <p class="lead">Five years inside enterprise logistics operations across Southeast Asia and the GCC: documenting how the work really runs, finding where the product gets in the way, and getting it fixed with Product and Engineering.</p>
-    <div class="meta"><span>Customer discovery</span><span>Requirements</span><span>Integrations</span><span>SQL dashboards</span></div>
-    <p class="micro" style="margin-top:16px">Client names are left out on purpose. Every number on this page is from live client work.</p>
-  </div>
-  <div class="visual"><div class="diagram">
-    <div class="node green">CUSTOMER SOPs</div><div class="arrow">↓</div>
-    <div class="node">GAP REGISTER</div><div class="arrow">↓</div>
-    <div class="node green">PROPOSAL + ACCEPTANCE CRITERIA</div><div class="arrow">↓</div>
-    <div class="node">SHIPPED FEATURE</div><div class="arrow">↓</div>
-    <div class="node green">TRAINING + HYPERCARE</div>
-  </div></div>
-</header>
+<main id="main">
+<header class="page-head"><div class="wrap">
+  <a class="crumb" href="work.html">All work</a>
+  <p class="kicker">Shipped work at FarEye Technologies</p>
+  <h1>From customer SOPs to shipped features</h1>
+  <p class="lead">Five years inside enterprise logistics operations across Southeast Asia and the GCC: documenting how the work really runs, finding where the product gets in the way, and getting it fixed with Product and Engineering.</p>
+  <dl class="glance">
+    <div><dt>My role</dt><dd>Solution Engineer, since 2024</dd></div>
+    <div><dt>Worked with</dt><dd>Product, Engineering and client teams</dd></div>
+    <div><dt>Clients</dt><dd>Enterprise logistics, SEA and GCC</dd></div>
+    <div><dt>Headline result</dt><dd>About 20% faster feedback to release</dd></div>
+  </dl>
+</div></header>
 
-<section><div class="wrap casebody">
-<aside class="toc"><div class="eyebrow">On this page</div>
-<a href="#context">01 Context</a><a href="#problem">02 Problem</a><a href="#approach">03 What I did</a><a href="#shipped">04 What shipped</a><a href="#integration">05 Hardest part</a><a href="#results">06 Results</a><a href="#earlier">07 Earlier roles</a>
-</aside>
-<article class="casecontent">
+<div class="wrap case-body">
+  <nav class="toc" aria-label="On this page"><p>On this page</p><a href="#context">Context</a><a href="#problem">Problem</a><a href="#approach">How I worked</a><a href="#shipped">What shipped</a><a href="#integration">Hardest part</a><a href="#results">Results</a><a href="#earlier">Earlier roles</a></nav>
+  <article class="case-content">
 
-<section id="context" style="padding-top:0;border:0">
-  <div class="eyebrow">01 · Context</div><h2>Enterprise logistics, from inbound to customs.</h2>
-  <p>FarEye is an enterprise logistics SaaS platform. The clients I work with run inbound, sorting, routing, delivery, returns and customs operations on it, across Southeast Asia and the GCC. I joined as a Graduate Engineer Trainee in 2021 and have been a Solution Engineer since 2024.</p>
-  <div class="stats">
-    <div class="stat"><strong>5 yrs</strong><span>at FarEye Technologies</span></div>
-    <div class="stat"><strong>SEA + GCC</strong><span>enterprise client regions</span></div>
-    <div class="stat"><strong>3 roles</strong><span>Trainee to Solution Engineer</span></div>
-    <div class="stat"><strong>6</strong><span>operational areas documented</span></div>
-  </div>
-</section>
+    <section id="context">
+      <h2>Context</h2>
+      <div class="prose">
+        <p>FarEye is an enterprise logistics SaaS platform. The clients I work with run inbound, sorting, routing, delivery, returns and customs operations on it, across Southeast Asia and the GCC.</p>
+        <p>I joined as a Graduate Engineer Trainee in 2021 and have been a Solution Engineer since 2024. Client names are left out on purpose. Every number on this page comes from live client work, not targets.</p>
+      </div>
+    </section>
 
-<section id="problem">
-  <div class="eyebrow">02 · Problem</div><h2>The product assumed one way of working. Customers ran another.</h2>
-  <p>Enterprise operations rarely run exactly the way a product expects. Where they didn't match, the same customer issues kept coming back, recurring reporting was done by hand, and feedback took too long to reach a release.</p>
-  <div class="callout"><b>My job:</b> find where the product gets in the way of the work, and get it fixed with Product and Engineering.</div>
-</section>
+    <section id="problem">
+      <h2>Problem</h2>
+      <div class="prose">
+        <p>Enterprise operations rarely run exactly the way a product expects. Where they didn't match, the same customer issues kept coming back, recurring reporting was done by hand, and feedback took too long to reach a release.</p>
+      </div>
+      <div class="decision"><b>How I framed my job</b><p>Find where the product gets in the way of the work, and get it fixed with Product and Engineering.</p></div>
+    </section>
 
-<section id="approach">
-  <div class="eyebrow">03 · What I did</div><h2>Document, log the gaps, specify, enable.</h2>
-  <div class="canvasgrid">
-    <div class="canvascard"><b>Document</b><h4>Customer SOPs, end to end</h4><p>Documented how clients run inbound, sorting, routing, delivery, returns and customs.</p></div>
-    <div class="canvascard"><b>Log</b><h4>A gap register</h4><p>Turned the differences between those workflows and the product into a gap register.</p></div>
-    <div class="canvascard"><b>Specify</b><h4>Proposals with acceptance criteria</h4><p>Wrote recurring customer issues up as proposals and acceptance criteria, as roadmap input for Product and Engineering.</p></div>
-    <div class="canvascard"><b>Enable</b><h4>Training for every change</h4><p>Built a training package (video, slides, reference guides) for every change shipped, covering context, procedure, exceptions and escalation paths.</p></div>
-  </div>
-</section>
+    <section id="approach">
+      <h2>How I worked</h2>
+      <div class="prose"><p>The same loop, client after client.</p></div>
+      <ol class="flow">
+        <li><div><b>Document</b><span>Wrote down customer SOPs end to end, across inbound, sorting, routing, delivery, returns and customs.</span></div></li>
+        <li><div><b>Log the gaps</b><span>Kept a gap register of every place where the workflow and the product didn't match.</span></div></li>
+        <li><div><b>Specify</b><span>Wrote recurring issues up as proposals with acceptance criteria, as roadmap input for Product and Engineering.</span></div></li>
+        <li><div><b>Ship</b><span>Worked with Engineering on scope, then ran regression and load tests on live production data before go-live.</span></div></li>
+        <li><div><b>Enable</b><span>Built a training package for every change, held daily hypercare checks, and coached the client team to run it on their own.</span></div></li>
+      </ol>
+    </section>
 
-<section id="shipped">
-  <div class="eyebrow">04 · What shipped</div><h2>Three gaps that became features.</h2>
-  <p>Each started as a documented customer workflow the product didn't handle, and shipped in partnership with Product and Engineering.</p>
-  <div class="canvasgrid">
-    <div class="canvascard"><b>Shipped</b><h4>Customs event</h4><p>A new "Confiscated by Customs" event in the shipment lifecycle.</p></div>
-    <div class="canvascard"><b>Shipped</b><h4>Force majeure marking</h4><p>A way to mark shipments affected by force majeure.</p></div>
-    <div class="canvascard"><b>Shipped</b><h4>Automated rack assignment</h4><p>Rack assignment handled by the system instead of by hand.</p></div>
-    <div class="canvascard"><b>Shipped</b><h4>With every release</h4><p>A training package for the customer team, covering procedure, exceptions and escalation paths.</p></div>
-  </div>
-</section>
+    <section id="shipped">
+      <h2>What shipped</h2>
+      <div class="prose"><p>Three of the gaps from the register that became product features.</p></div>
+      <div class="table-scroll"><table class="data">
+        <thead><tr><th scope="col">Feature</th><th scope="col">What it does</th></tr></thead>
+        <tbody>
+          <tr><td><b>Customs event</b></td><td>A new "Confiscated by Customs" event in the shipment lifecycle.</td></tr>
+          <tr><td><b>Force majeure marking</b></td><td>Lets operations mark shipments affected by force majeure.</td></tr>
+          <tr><td><b>Automated rack assignment</b></td><td>The system assigns racks, instead of a person doing it by hand.</td></tr>
+        </tbody>
+      </table></div>
+      <div class="prose" style="margin-top:20px"><p>Each one shipped with a training package (video, slides and a reference guide) covering context, procedure, exceptions and escalation paths.</p></div>
+    </section>
 
-<section id="integration">
-  <div class="eyebrow">05 · Hardest part</div><h2>Connecting physical sorting machines to the platform, from scratch.</h2>
-  <p>The sorting machines and the platform had to agree on every parcel. I designed the integration layer between them, at the boundary where hardware meets software.</p>
-  <div class="visual"><div class="diagram">
-    <div class="node">SORTING MACHINE · reads the barcode</div><div class="arrow">↓</div>
-    <div class="node green">API CONTRACT · what moves, in what shape</div><div class="arrow">↓</div>
-    <div class="node">PLATFORM · records the sort</div><div class="arrow">↓</div>
-    <div class="node green">EXCEPTIONS + RECONCILIATION · unknown barcodes, mismatches</div>
-  </div></div>
-  <div class="canvasgrid" style="margin-top:28px">
-    <div class="canvascard"><b>01</b><h4>API contracts</h4><p>Defined what data moves between machine and platform, and in what shape.</p></div>
-    <div class="canvascard"><b>02</b><h4>Exception handling</h4><p>Decided what happens when a machine reads a barcode the platform doesn't recognise.</p></div>
-    <div class="canvascard"><b>03</b><h4>Reconciliation</h4><p>Caught mismatches between what the machine did and what the system recorded.</p></div>
-    <div class="canvascard"><b>04</b><h4>Stress testing</h4><p>Tested the integration at peak throughput before go-live.</p></div>
-  </div>
-</section>
+    <section id="integration">
+      <h2>Hardest part: a sorting-machine integration, from scratch</h2>
+      <div class="prose"><p>Physical sorting machines and the platform had to agree on every parcel. I designed the integration layer between them, at the boundary where hardware meets software.</p></div>
+      <ol class="flow">
+        <li><div><b>API contracts</b><span>What data moves between machine and platform, and in what shape.</span></div></li>
+        <li><div><b>Exception handling</b><span>What happens when a machine reads a barcode the platform doesn't recognise.</span></div></li>
+        <li><div><b>Reconciliation</b><span>How to catch mismatches between what the machine did and what the system recorded.</span></div></li>
+        <li><div><b>Stress testing</b><span>Testing the whole path at peak throughput before go-live.</span></div></li>
+      </ol>
+    </section>
 
-<section id="results">
-  <div class="eyebrow">06 · Results</div><h2>Measured on live client work, not targets.</h2>
-  <div class="stats">
-    <div class="stat"><strong>~20%</strong><span>faster feedback-to-release cycle</span></div>
-    <div class="stat"><strong>95%+</strong><span>of recurring reporting automated with SQL dashboards</span></div>
-    <div class="stat"><strong>~10%</strong><span>fewer support tickets</span></div>
-    <div class="stat"><strong>0</strong><span>misrouted shipments on a hub removal</span></div>
-  </div>
-  <div class="canvasgrid" style="margin-top:28px">
-    <div class="canvascard"><b>Go-live</b><h4>Incident-free carrier launch</h4><p>Ran regression and load tests on live production data before go-live, then daily hypercare checks.</p></div>
-    <div class="canvascard"><b>Handover</b><h4>A team that runs it alone</h4><p>Coached the customer team until they could run the change independently.</p></div>
-    <div class="canvascard"><b>Data</b><h4>Dashboards on what matters</h4><p>SQL dashboards on sort accuracy, routing efficiency, SLA performance and PUDO adoption.</p></div>
-    <div class="canvascard"><b>Loop</b><h4>Faster from issue to release</h4><p>Specs and acceptance criteria cut the feedback-to-release cycle by about a fifth.</p></div>
-  </div>
-</section>
+    <section id="results">
+      <h2>Results</h2>
+      <div class="figures">
+        <div><strong>~20%</strong><span>faster feedback-to-release cycle</span></div>
+        <div><strong>95%+</strong><span>of recurring reporting automated</span></div>
+        <div><strong>~10%</strong><span>fewer support tickets</span></div>
+        <div><strong>0</strong><span>misrouted shipments on a hub removal</span></div>
+      </div>
+      <div class="prose" style="margin-top:22px">
+        <p>The carrier launch went live without incidents. The reporting numbers come from SQL dashboards I built on sort accuracy, routing efficiency, SLA performance and PUDO adoption.</p>
+      </div>
+    </section>
 
-<section id="earlier">
-  <div class="eyebrow">07 · Earlier roles</div><h2>Where the customer instinct came from.</h2>
-  <div class="canvasgrid">
-    <div class="canvascard"><b>2022 to 2024 · Associate Solution Engineer</b><h4>Discovery and demos</h4><p>Led discovery sessions and technical demos across SEA and the GCC that helped convert enterprise deals. Resolved ~90% of production incidents within SLA by analysing logs, API behaviour and workflow failures.</p></div>
-    <div class="canvascard"><b>2021 to 2022 · Graduate Engineer Trainee</b><h4>Client solutions</h4><p>Delivered 10+ custom client solutions and automated invoicing logic, cutting manual effort by 60%.</p></div>
-  </div>
-</section>
+    <section id="earlier">
+      <h2>Earlier roles</h2>
+      <div class="table-scroll"><table class="data">
+        <thead><tr><th scope="col">Years</th><th scope="col">Role</th><th scope="col">What I did</th></tr></thead>
+        <tbody>
+          <tr><td class="num">2022 to 2024</td><td>Associate Solution Engineer</td><td>Led discovery sessions and technical demos across SEA and the GCC that helped convert enterprise deals. Resolved ~90% of production incidents within SLA by analysing logs, API behaviour and workflow failures.</td></tr>
+          <tr><td class="num">2021 to 2022</td><td>Graduate Engineer Trainee</td><td>Delivered 10+ custom client solutions and automated invoicing logic, cutting manual effort by 60%.</td></tr>
+        </tbody>
+      </table></div>
+    </section>
 
-</article></div></section>
-<section><div class="wrap"><div class="next">
-  <a href="work.html"><small>← Back to work</small><b>All case studies</b></a>
-  <a href="case-study-01.html"><small>Next case study →</small><b>FELT, intelligent gifting</b></a>
-</div></div></section>
+  </article>
+</div>
+
+<nav class="wrap pager" aria-label="Case studies">
+  <a href="work.html"><small>Back to</small><b>All work</b></a>
+  <a class="next" href="case-study-01.html"><small>Next case study</small><b>FELT, intelligent gifting</b></a>
+</nav>
 </main>
-<footer><div class="wrap">© 2026 Saksham Malik · Product / Solutions / Systems · <a href="mailto:maliksaksham0509@gmail.com">Email</a> · <a href="https://www.linkedin.com/in/sakshammalik99/" target="_blank" rel="noopener">LinkedIn</a></div></footer>
+
+<footer class="site-foot"><div class="wrap"><span>© 2026 Saksham Malik</span><nav aria-label="Footer"><a href="mailto:maliksaksham0509@gmail.com">Email</a><a href="https://www.linkedin.com/in/sakshammalik99/" rel="noopener">LinkedIn</a><a href="assets/Saksham_Malik_Resume.pdf">Resume</a></nav></div></footer>
 <script src="assets/app.js"></script>
-</body></html>
+</body>
+</html>
