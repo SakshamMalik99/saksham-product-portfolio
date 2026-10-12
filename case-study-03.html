@@ -31,7 +31,7 @@
 </div></header>
 
 <div class="wrap case-body">
-  <nav class="toc" aria-label="On this page"><p>On this page</p><a href="#context">Context</a><a href="#problem">Problem</a><a href="#approach">How I worked</a><a href="#shipped">What shipped</a><a href="#integration">Hardest part</a><a href="#results">Results</a><a href="#earlier">Earlier roles</a></nav>
+  <nav class="toc" aria-label="On this page"><p>On this page</p><a href="#context">Context</a><a href="#problem">Problem</a><a href="#approach">How I worked</a><a href="#shipped">What shipped</a><a href="#integration">Hardest part</a><a href="#decisions">Decisions I made</a><a href="#results">Results</a><a href="#earlier">Earlier roles</a></nav>
   <article class="case-content">
 
     <section id="context">
@@ -64,13 +64,15 @@
 
     <section id="shipped">
       <h2>What shipped</h2>
-      <div class="prose"><p>Three of the gaps from the register that became product features.</p></div>
+      <div class="prose"><p>Five gaps from the register that became product features.</p></div>
       <div class="table-scroll"><table class="data">
         <thead><tr><th scope="col">Feature</th><th scope="col">What it does</th></tr></thead>
         <tbody>
           <tr><td><b>Customs event</b></td><td>A new "Confiscated by Customs" event in the shipment lifecycle.</td></tr>
           <tr><td><b>Force majeure marking</b></td><td>Lets operations mark shipments affected by force majeure.</td></tr>
           <tr><td><b>Automated rack assignment</b></td><td>The system assigns racks, instead of a person doing it by hand.</td></tr>
+          <tr><td><b>IsBulky classification</b></td><td>Flags bulky shipments so they can be handled differently.</td></tr>
+          <tr><td><b>PUDO workflows</b></td><td>Pick-up and drop-off point flows, with adoption tracked on a dashboard.</td></tr>
         </tbody>
       </table></div>
       <div class="prose" style="margin-top:20px"><p>Each one shipped with a training package (video, slides and a reference guide) covering context, procedure, exceptions and escalation paths.</p></div>
@@ -87,6 +89,19 @@
       </ol>
     </section>
 
+    <section id="decisions">
+      <h2>Decisions I made</h2>
+      <div class="prose"><p>Three calls that changed how the work got done, not just what got built.</p></div>
+      <div class="table-scroll"><table class="data">
+        <thead><tr><th scope="col">Decision</th><th scope="col">Why</th><th scope="col">What it led to</th></tr></thead>
+        <tbody>
+          <tr><td><b>Made rate card testing a mandatory gate before integration testing</b></td><td>Fare miscalculations across service type and weight combinations were surfacing later as misattributed SIT failures.</td><td>Edge cases caught during master data validation, before integration testing.</td></tr>
+          <tr><td><b>Built one integration architecture for domestic and international shipments</b></td><td>The two journeys each had their own carrier schemas, status events and label formats.</td><td>A single architecture, plus integration playbooks on endpoints, authentication, payloads and error handling.</td></tr>
+          <tr><td><b>Replaced manual rate calculations with a self-service workflow</b></td><td>Rates were being worked out by hand.</td><td>Requirements, business rules and acceptance criteria for a rate card and billing dashboard, built with Product and Engineering.</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
     <section id="results">
       <h2>Results</h2>
       <div class="figures">
@@ -96,7 +111,8 @@
         <div><strong>0</strong><span>misrouted shipments on a hub removal</span></div>
       </div>
       <div class="prose" style="margin-top:22px">
-        <p>The carrier launch went live without incidents. The reporting numbers come from SQL dashboards I built on sort accuracy, routing efficiency, SLA performance and PUDO adoption.</p>
+        <p>The carrier launch went live without incidents, and every anomaly in hypercare was resolved the same business day. The automation numbers come from SQL dashboards I built on sort accuracy, routing efficiency, SLA performance and PUDO adoption.</p>
+        <p>Across five years I've delivered 100+ integrations across ERP, carrier and third-party systems. After one launch, I used usage data to find where orders were dropping off and turned those adoption gaps into roadmap improvements that raised order accuracy.</p>
       </div>
     </section>
 
